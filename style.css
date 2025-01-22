@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow");
+
+html,
+body {
+  background-size: cover;
+  font-family: "Barlow", sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1.main,
+p.demos {
+  animation-delay: 18s;
+}
+
+.sp-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3) 35%,
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.sp-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.sp-container h2 {
+  position: absolute;
+  top: 50%;
+  line-height: 100px;
+  height: 90px;
+  margin-top: -68px;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  color: transparent;
+  animation: blurFadeInOut 3s ease-in backwards;
+}
+
+.sp-container h2.frame-1 {
+  animation-delay: 0s;
+}
+
+.sp-container h2.frame-2 {
+  animation-delay: 3s;
+}
+
+.sp-container h2.frame-3 {
+  animation-delay: 6s;
+}
+
+.sp-container h2.frame-4 {
+  font-size: 30px;
+  animation-delay: 9s;
+}
+
+.sp-container h2.frame-5 {
+  animation: none;
+  color: transparent;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.sp-container h2.frame-5 span {
+  animation: blurFadeIn 3s ease-in 12s backwards;
+  color: transparent;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.sp-container h2.frame-5 span:nth-child(2) {
+  animation-delay: 13s;
+}
+
+.sp-container h2.frame-5 span:nth-child(3) {
+  animation-delay: 14s;
+}
+
+.sp-globe {
+  position: absolute;
+  width: 282px;
+  height: 273px;
+  left: 50%;
+  top: 50%;
+  margin: -137px 0 0 -141px;
+  animation: fadeInBack 3.6s linear 14s backwards;
+  opacity: 0.3;
+  transform: scale(5);
+}
+
+.sp-circle-link {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  margin-left: -50px;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  color: #3f1616;
+  font-size: 25px;
+  border-radius: 50%;
+  animation: fadeInRotate 1s linear 16s backwards;
+  transform: scale(1) rotate(0deg);
+}
+
+.sp-circle-link:hover {
+  background: #85373b;
+  color: #fff;
+}
+
+@keyframes blurFadeInOut {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    transform: scale(1.3);
+  }
+  20%,
+  75% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    text-shadow: 0px 0px 50px #fff;
+    transform: scale(0);
+  }
+}
+
+@keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    transform: scale(1.3);
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0px 0px 10px #fff;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInBack {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(5);
+  }
+}
+
+@keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background: #000;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  transform: translate(-50%, -50%);
+  animation: heart 1.5s ease infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
